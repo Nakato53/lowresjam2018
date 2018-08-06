@@ -21,7 +21,7 @@ function Game:new()
   ColorsManager:add("white",255,255,255)
  
   player = Player()
-  player.x = 10
+  player.x = 30
   explosion = Animation("assets/images/explo.png", 8)
   explosion:Add("boom",{0,1,2,3,4,5,6,7,9,10,11,12,13},0.05)
 

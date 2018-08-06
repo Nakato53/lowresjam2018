@@ -13,7 +13,7 @@ function Game:new()
   ColorsManager:add("white",255,255,255)
  
   player = Player()
-  player.x = 10
+  player.x = 34
   
   currentLevel  = Level()
   currentLevel:generate()
