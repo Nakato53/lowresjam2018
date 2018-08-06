@@ -98,7 +98,7 @@ function Level:generate()
           x = roomX,
           y = roomY,
           finished = false,
-          tileID = love.math.random(1, 5),
+          tileID = love.math.random(1,5),
           up = ROOM_DOOR_NONE,
           down = ROOM_DOOR_NONE,
           left = ROOM_DOOR_NONE,
