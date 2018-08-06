@@ -1,0 +1,38 @@
+//extern vec2 screen_size;
+uniform vec4 found_color[10];
+uniform vec4 replace_color[10];
+
+  vec4 effect(vec4 color, Image image, vec2 uvs, vec2 screen_coords){
+    vec4 nullcolor = vec4(0,0,0,0);
+    vec4 pixel = Texel(image,uvs);
+
+    for(int i = 0; i <= 10; i++) { 
+      if(found_color[i] == nullcolor){
+      }else{
+        if(pixel == found_color[i]){
+          return replace_color[i]*color;
+        }
+      }
+    }
+
+  /*  if(found_color1 == nullcolor){
+    }else{
+      if(pixel == found_color1){
+        return replace_color1*color;
+      }
+    }
+
+    if(found_color2 == nullcolor){
+    }else{
+      if(pixel == found_color2){
+        return replace_color2*color;
+      }
+    }
+    */
+    return pixel*color;
+
+   // vec2 sc = vec2(screen_coords.x / screen_size.x,screen_coords.y / screen_size.y);
+
+    //return pixel*color*vec4(1,0.5,0.5,1.0);
+    //return vec4(sc.x,sc.y, 1.0, 1.0)*pixel;
+  }
