@@ -98,7 +98,7 @@ function Level:generate()
           x = roomX,
           y = roomY,
           finished = false,
-          tileID = love.math.random(0,2),
+          tileID = love.math.random(1,5),
           up = ROOM_DOOR_NONE,
           down = ROOM_DOOR_NONE,
           left = ROOM_DOOR_NONE,
@@ -235,7 +235,7 @@ function Level:draw()
   if(self.map) then self:drawMap() end
 
   if(self.currentRoom.instance.infade) then
-    love.graphics.setColor(0,0,0,self.currentRoom.instance.fade)
+    love.graphics.setColor(16/255,29/255,49/255,self.currentRoom.instance.fade)
     love.graphics.rectangle("fill", 0,0,64,64 )
   end
 end
